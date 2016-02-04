@@ -1,0 +1,119 @@
+html, body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0
+}
+
+h1 {
+    color: rgb(85, 172, 238);
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    margin-left: 265px;
+    margin-bottom: 10px
+}
+
+h2 {
+   color: #777
+}
+
+p, ul {
+    color: #555
+}
+
+article {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    float: left;
+}
+
+section {
+    margin-left: 240px;
+    margin-right: 10px;
+    background-color: #fcfcfc;
+    padding: 0 25px;
+    margin-bottom: 20px;
+    border: solid 1px #ccc
+}
+
+nav {
+    font-size: 14px;
+    display: inline-block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    border-top: none;
+    border-right: none;
+    padding: 0;
+    width: 200px;
+    margin-top: 13px
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+
+nav li {
+    float: left;
+    clear: both;
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+}
+
+nav a {
+    margin: 0;
+    padding: 0;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+nav a:hover {
+    background-color: rgb(85, 172, 238);
+    color: #fff
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 14px
+}
+
+table td, table th {
+    padding: 10px;
+    border-bottom: solid 1px #ccc
+}
+
+span.param-name {
+    background-color: #fafafa;
+    color: orange;
+    padding: 5px;
+    border-radius: 5px
+}
+
+table.striped tbody tr:nth-child(odd) {
+   background-color: #eee;
+}
+
+p.code {
+    margin: 30px 0 30px 0
+}
+
+code {
+    background-color: #fff;
+    border: solid 1px #ccc;
+    padding: 10px;
+    font-size: 14px
+}
+
+.bullet {
+    font-size: 31px;
+}
