@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Navease.js documentation</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="doc.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<article>
+    <h1>Navease.js</h1>
+    <section>
+        <h2><a name="intro">Intro</a></h2>
+        <p>
+        Javascript library enabling smooth scroll between anchor links on the page <br>
+        using different easing functions.
+        </p>
+
+        <p>Navease uses Easing.js for easing.</p>
+
+        <p>Features:</p>
+        <ul>
+            <li>Scrolling speed can be customized</li>
+            <li>Different easing functions (please refer to Easing.js for the full list)</li>
+            <li>Navease functionality can be set to elements with specified css selector only</li>
+        </ul>
+
+        <p>Source code is available at <a href="https://github.com/mark-rolich/Navease.js">Github</a></p>
+
+        <p>Licensed under the MIT License, © 2016 Mark Rolich</p>
+    </section>
+    <section>
+        <h2><a name="jsdoc">JSDoc</a></h2>
+
+        <p class="code"><code>new Navease(frames, easing, selector)</code></p>
+
+        <p>Parameters:</p>
+
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Argument</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="param-name">frames</span></td>
+                    <td><span class="param-type">number</span></td>
+                    <td><span class="param-arg">&lt;optional&gt;</span></td>
+                    <td><span class="param-default">30</span></td>
+                    <td><span class="param-desc">frames count (lower is faster, minimum is 1)</span></td>
+                </tr>
+                <tr>
+                    <td><span class="param-name">easing</span></td>
+                    <td><span class="param-type">string</span></td>
+                    <td><span class="param-arg">&lt;optional&gt;</span></td>
+                    <td><span class="param-default">"easeInOutQuad"</span></td>
+                    <td><span class="param-desc">easing function name from Easing.js</span></td>
+                </tr>
+                <tr>
+                    <td><span class="param-name">selector</span></td>
+                    <td><span class="param-type">string</span></td>
+                    <td><span class="param-arg">&lt;optional&gt;</span></td>
+                    <td><span class="param-default">"a[name]"</span></td>
+                    <td><span class="param-desc">apply Navease functionality to the specified selector only</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul>
+            <li>Throws an exception if easing function is not defined in Easing.js</li>
+            <li>Throws an exception if frames count is less than 1</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><a name="example">Examples<a></h2>
+
+        <p>Using default values:</p>
+
+        <p class="code"><code>new Navease();</code></p>
+
+        <p>Navease will be applied to all anchor links (a[name])<br>
+        with "easeInOutQuad" easing, and will contain 30 frames (duration will be 0.5 seconds at 60 fps)
+
+        <p class="code"><code>new Navease(60, "easeInOutCubic", ".scroll");</code></p>
+
+        <p>Navease will be applied to elements with css class "scroll", <br>
+        with "easeInOutCubic" easing, and will contain 60 frames (at typical 60 frames per second the duration will be 1 second)
+        </p>
+        
+        <p>Navigation on the current page uses Navease.js with default settings (you can minimize the page for better experience)</p>
+    </section>
+
+    <section>
+        <h2><a name="compat">Browser Compatibility</a></h2>
+
+        <ul>
+            <li>IE >= 10</li>
+            <li>Chrome</li>
+            <li>Firefox</li>
+            <li>Safari</li>
+        </ul>
+    </section>    
+</article>
+<nav>
+    <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#jsdoc">JSDoc</a></li>
+        <li><a href="#example">Examples</a></li>
+        <li><a href="#compat">Browser Compatibility</a></li>
+    </ul>
+</nav>
+
+<script type="text/javascript" src="src/Easing.js"></script>
+<script type="text/javascript" src="src/Navease.min.js"></script>
+<script>new Navease();</script>
+</body>
+</html>
